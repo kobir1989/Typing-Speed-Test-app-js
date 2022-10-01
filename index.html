@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/50ba960c66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+          colors: {
+            body: '#AEBDCA',
+            deepGray: '#323136',
+            lightNavy: '#2B4865',
+            red: '#E94560',
+            gray: '#C8C6C6',
+            light: '#d8d8d8',
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-body text-[#25316D]">
+    <div class="lg:w-6/12 w-11/12 mx-auto mt-[3rem]">
+      <div class="text-center mb-20 text-[1.5rem]">
+        <h1>CHECK YOUR TYPE SPEED</h1>
+      </div>
+      <div class="flex flex-wrap justify-evenly mb-8 text-[1.2rem] font-medium">
+        <h2>Time: <span id="time">00</span></h2>
+        <h2>WPM: <span id="word">00</span></h2>
+        <h2>Mistakes: <span id="mistake">00</span></h2>
+        <h2>Accuracy: <span id="accuracy">00</span></h2>
+      </div>
+      <div
+        id="checkText"
+        class="mb-8 p-4 border-[1px] border-gray w-11/12 mx-auto"
+      ></div>
+      <div class="flex items-center justify-center">
+        <textarea
+          class="rounded-xl shadow-xl outline-0 p-4 text-[1.2rem] font-medium"
+          name=""
+          id="text"
+          cols="80"
+          rows="10"
+          oninput="getTextInput()"
+        ></textarea>
+      </div>
+      <div class="flex gap-6 items-center justify-center mt-8">
+        <button
+          id="startBtn"
+          class="w-[8rem] h-[2.5rem] bg-[#25316D] text-[#fff] rounded"
+        >
+          Start
+        </button>
+        <button
+          id="cancelBtn"
+          class="hidden w-[8rem] h-[2.5rem] bg-[#25316D] text-[#fff] rounded"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
